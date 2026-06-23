@@ -1,4 +1,4 @@
-# 🌾 梦境农场 - Dreamy Farm
+# 🌾 梦境农场 - Dreamy Farm（旧版）
 
 二次元风格农场经营游戏，使用 Godot 4.6.2 开发。
 目前正在使用unity引擎进行开发，后续会使用unity
