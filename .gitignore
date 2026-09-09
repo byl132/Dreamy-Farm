@@ -1,16 +1,104 @@
-# Godot 4+ specific ignores
-.godot/
-.nomedia
+# ============================================================
+# Dreamy Farm — GitHub 仓库忽略规则
+# ============================================================
 
-# Godot-specific ignores
-.import/
-export.cfg
-export_credentials.cfg
+# ---- 引擎与文档库（由 TapTap Maker / ai-dev-kit 提供，非本项目源码）----
+engine-docs/
+examples/
+lua-tools/
+schemas/
+skills/
+templates/
+tools/
+urhox-libs/
+.emmylua/
 
-# Imported translations (automatically generated from CSV files)
-*.translation
+# ---- 原始模型备份（单个 .mdl 超过 GitHub 100MB 硬限制）----
+raw_model_backup/
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
+# ---- 运行时/存档数据（含玩家标识，不应入库）----
+user_identity_*.txt
+new_player_guide_seen_*.txt
+dlc_purchases.json
+save_*.json
+
+# ---- 聊天上传的参考图（隐私，非游戏资源）----
+_uploads/
+
+# ---- AI 代理记忆与知识库（含内部对话、访问令牌）----
+.workbuddy/
+.qoder/
+.agent/
+.agents/
+.codex/
+.opencode/
+.claude/
+.cursor/
+.gemini/
+.vscode/
+.maker/
+.sce/
+AGENTS.md
+CLAUDE.md
+
+# ---- 会话导入与分享包 ----
+incoming/
+.trae-html-share-packages/
+
+# ---- 构建产物与缓存 ----
+.build/
+dist/
+.cli/
+.tmp/
+.cache_mdl/
+*.crswap
+.DS_Store
+
+# ---- 临时/中间产物 ----
+*.tmp
+*.tmp.py
+*.patch
+.tmp_*
+patch-debug.txt
+validate_report.json
+main-index.tmp
+main-overlay-fix.tmp
+main-overlay-fix.patch
+
+# ---- 一次性备份与调试快照 ----
+_backup_*/
+_diff/
+screenshots/
+notes/_git_*.txt
+
+# ---- 日志 ----
+logs/
+*.log
+
+# ---- 服务端登录凭据（TapTap 小游戏 appid/secret，严禁入库）----
+scripts/config/ServerLoginConfig.lua
+
+# ---- 发行/上架/更新计划与开发过程记录（内部资料，不入库）----
+# 注意：以下路径均以 / 锚定仓库根目录，避免误伤 scripts/docs/ 等设计资料
+/docs/
+/production/
+/notes/
+/.trae/
+/.project/taptap-video-cache.json
+/多端适配与海外发行规划.md
+/代码分析报告_梦境农场.md
+/工作进度可视化.md
+/阶段定位与下一步.md
+/下一步修复清单_2026-07-22.md
+/M1重构完成报告.md
+/overview.md
+/prd.html
+/dream-farm-ui.html
+/adr-*.md
+/adr2-*.md
+/design/visual-review/
+/design/character-placement-*.md
+/design/settings-ux-spec-*.md
+/design/art/*-plan.md
+/design/art/*-2026-*.md
+/.project/*.build/

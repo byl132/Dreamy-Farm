@@ -1,0 +1,72 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "微信小游戏配置 — 主包 ≤ 4MB，分包加载，社交功能，云开发",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "wechat",
+    "platform_name": "微信小游戏",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "taptap_sdk": {
+      "login_enabled": false
+    },
+
+    "platform_config": {
+      "app_id": "YOUR_WECHAT_APPID_HERE",
+
+      "ad_unit_ids": {
+        "reward": "YOUR_WECHAT_REWARD_AD_UNIT_ID_HERE",
+        "banner": "YOUR_WECHAT_BANNER_AD_ID_HERE"
+      },
+
+      "cloud_env_id": "YOUR_WECHAT_CLOUD_ENV_ID_HERE",
+
+      "subpackages": [
+        {
+          "name": "assets_sub",
+          "root": "assets_sub/",
+          "_comment": "分包根目录，放置大体积资源，主包仅保留核心代码"
+        }
+      ],
+
+      "features": {
+        "share": true,
+        "_share_comment": "启用微信分享功能（好友/朋友圈）",
+        "leaderboard": true,
+        "_leaderboard_comment": "启用微信开放数据域好友排行榜",
+        "open_data_context": true,
+        "_open_data_comment": "启用开放数据域，用于好友互动数据展示"
+      }
+    }
+  }
+}

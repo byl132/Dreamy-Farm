@@ -1,0 +1,128 @@
+{
+  "$schema": "../schemas/settings.schema.json",
+  "sources": {
+    "engine": {
+      "tag": "stable"
+    },
+    "engine-res": {
+      "tag": "stable"
+    },
+    "official-res": {
+      "tag": "stable"
+    }
+  },
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": [
+      "../assets",
+      "../scripts"
+    ],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+  "@runtime": {
+    "build_target": "taptap_maker",
+    "multiplayer": {
+      "enabled": true,
+      "max_players": 4,
+      "persistent_world": {
+        "enabled": true
+      },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+    "taptap_sdk": {
+      "client_id": "6hz8r3jespfut4tq85",
+      "client_token": "pAZGo4YbKAUIdc1Euou3QDbfz7mcm57QLthFyuv0",
+      "public_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0qjFGPPWbe6BEhw6IV7Own3ceo5/j2cjWD9+LMWq0OQslEAXomsfoTzInkbuexUgoPgxRT2iyvwVIl8BWa/OUrNXU93ZGoRQWpyVaTIIW+VqcZprUv0mCSM57EFPHvVfSfNmpu1GMbZyXb5VrH7KMRjbmafZMC/TG3q/cjC2BkbaBfS8kXZsdeaQ1h7EVBFtDGVkNhbig/qLFKW9Pcv6TGGWSO0expdMLQa44swSu2T2YAsLi3KnSN9/diZ680WVCyxH4XrGhAN5UbyoJYTGDh0Ptb00uh1eiD3N1qLmfBmCeDpXgZjYdKaI6TeREIyBuVpXDdUUKffPNSQVUD6APxwIDAQAB",
+      "login_enabled": true,
+      "anti_addiction_enabled": true,
+      "tapdb_enabled": true,
+      "tapmoment_enabled": true,
+      "tap_achievement_enabled": true,
+      "tap_leaderboard_enabled": true,
+      "tap_oauth_enabled": false,
+      "channel": "taptap_maker",
+      "game_version": "1.0.307",
+      "is_cn": true,
+      "oauth_base_url": "https://your-backend-api.com",
+      "tds_gift": {
+        "enabled": true,
+        "api_base": "https://poster-api.xd.cn",
+        "server_code": "dream_farm",
+        "mode": "submit_simple"
+      },
+      "taplink": {
+        "enabled": true,
+        "scheme": "tds6hz8r3jespfut4tq85",
+        "routes": {
+          "gifts": "礼包兑换",
+          "invite_game": "邀请上线",
+          "invite_team": "邀请组队"
+        },
+        "examples": {
+          "gifts": "tds6hz8r3jespfut4tq85://gifts?code=DREAM-XXXX-XXXX-XXXX",
+          "invite_game": "tds6hz8r3jespfut4tq85://invite_game?open_id={open_id}&union_id={union_id}",
+          "invite_team": "tds6hz8r3jespfut4tq85://invite_team?open_id={open_id}&union_id={union_id}&team_id={team_id}"
+        }
+      }
+    },
+    "wechat": {
+      "_comment": "运行时默认配置（空=未启用）。完整微信小游戏配置见 .project/platforms/wechat.json 的 platform_config，构建时由 build_target=wechat 加载覆盖",
+      "app_id": "",
+      "cloud_env": "",
+      "ad_unit_id": {
+        "reward_video": "",
+        "banner": "",
+        "interstitial": ""
+      }
+    },
+    "douyin": {
+      "_comment": "运行时默认配置（空=未启用）。完整抖音小游戏配置见 .project/platforms/douyin.json 的 platform_config，构建时由 build_target=douyin 加载覆盖",
+      "app_id": "",
+      "ad_unit_id": {
+        "reward_video": "",
+        "banner": "",
+        "interstitial": ""
+      }
+    },
+    "google": {
+      "_comment": "运行时默认配置（空=未启用）。完整 Google Play 配置见 .project/platforms/google.json 的 google_play_games/play_billing/admob/firebase/gdpr，构建时由 build_target=google 加载覆盖",
+      "app_id": "",
+      "ad_unit_id": {
+        "reward_video": "",
+        "banner": "",
+        "interstitial": ""
+      }
+    },
+    "steam": {
+      "_comment": "运行时默认配置（空=未启用）。完整 Steam 配置见 .project/platforms/steam.json 的 steamworks/input/window，构建时由 build_target=steam 加载覆盖",
+      "app_id": ""
+    },
+    "ad": {
+      "status": 1,
+      "ad_spaces": [
+        {
+          "id": "1054323",
+          "type": 1
+        },
+        {
+          "id": "1054324",
+          "type": 2
+        }
+      ],
+      "top_on_placements": [],
+      "synced_at": "2026-09-01T01:15:51.122Z"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "TapTap Maker 平台配置 — 当前默认构建目标，仅 TapTap 登录",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "taptap_maker",
+    "platform_name": "TapTap Maker",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "taptap_sdk": {
+      "client_id": "YOUR_TAPTAP_CLIENT_ID_HERE",
+      "client_token": "YOUR_TAPTAP_CLIENT_TOKEN_HERE",
+      "server_secret": "YOUR_TAPTAP_SERVER_SECRET_HERE",
+      "login_enabled": true
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# ============================================================
+# QA Static Gate — 自动质量门（GitHub Actions）
+# 梦境农场 · Phase 6 Sprint（P6-QA-IMPL）
+# ------------------------------------------------------------
+# 作用：每次 push / PR 自动跑 Node 静态质量门
+#        node tests/gate/static-gate.cjs
+#   该门只依赖 Node + luaparse（无需 Lua 运行时），可在 CI 直接跑。
+#   退出码：0 = PASS（可含 WARN/INFO）；1 = FAIL（语法错/反模式命中）→ 步骤失败。
+# 适用：当仓库镜像或托管到 GitHub 时，本工作流即生效，可作合并门禁。
+#       （本项目 git remote 为 TapTap Maker 云端 git `maker.taptap.cn`，
+#        由云端构建驱动，仓库内 workflow 不会自动触发；Maker 端的等效
+#        自动化见 production/phase6-sprint/ci-integration.md 的本地 pre-push 门。）
+# 范围边界：仅覆盖静态门。Lua 规格（tests/spec/*）需 Maker/真机 Lua VM，
+#   真机冒烟需真机环境，二者不在 Node CI 内（见对应文档）。
+# ============================================================
+name: QA Static Gate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+# 质量门只需要读代码，不需要写权限
+permissions:
+  contents: read
+
+jobs:
+  static-gate:
+    name: Lua static quality gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      # luaparse 为 devDependency（package.json），无 lockfile → 用 npm install
+      - name: Install dev dependencies (luaparse)
+        run: npm install
+
+      # 静态门本身在 FAIL 时 exit 1，使本步骤失败 → 工作流失败 → PR 被门禁阻断。
+      # WARN / INFO 不影响退出码（仅提示/决策项，不自动放行或拦断）。
+      - name: Run static gate
+        run: node tests/gate/static-gate.cjs
+
+      # 可选强制：在仓库 Settings → Branches 开启分支保护，
+      #   将 "Lua static quality gate" 设为必需状态检查（required status check），
+      #   即可让 FAIL 真正阻断 merge。

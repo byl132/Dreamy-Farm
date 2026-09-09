@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "安卓掌机端配置 — 海外 Google Play 发行，GPGS 成就/排行榜，Play Billing 内购，AdMob 广告，Firebase 分析，GDPR 合规，多语言",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "android_handheld",
+    "platform_name": "Android Handheld",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "taptap_sdk": {
+      "login_enabled": false
+    },
+
+    "google_play_games": {
+      "app_id": "YOUR_GPGS_APP_ID_HERE",
+      "achievements": {
+        "enabled": true,
+        "list": [
+          {
+            "id": "YOUR_ACHIEVEMENT_ID_HERE",
+            "name": "first_harvest",
+            "description": "完成第一次收获",
+            "steps": 1
+          }
+        ]
+      },
+      "leaderboards": {
+        "enabled": true,
+        "list": [
+          {
+            "id": "YOUR_LEADERBOARD_ID_HERE",
+            "name": "global_wealth",
+            "description": "全球财富排行榜"
+          }
+        ]
+      }
+    },
+
+    "google_play_billing": {
+      "enabled": true,
+      "products": [
+        {
+          "id": "YOUR_IAP_PRODUCT_ID_HERE",
+          "type": "consumable",
+          "name": "dream_gems_pack_1",
+          "description": "梦境宝石小礼包"
+        }
+      ]
+    },
+
+    "admob": {
+      "app_id": "YOUR_ADMOB_APP_ID_HERE",
+      "ad_unit_ids": {
+        "reward": "YOUR_REWARD_AD_UNIT_ID_HERE",
+        "interstitial": "YOUR_INTERSTITIAL_AD_UNIT_ID_HERE",
+        "banner": "YOUR_BANNER_AD_UNIT_ID_HERE"
+      }
+    },
+
+    "firebase": {
+      "project_id": "YOUR_FIREBASE_PROJECT_ID_HERE",
+      "analytics_enabled": true,
+      "crashlytics_enabled": true
+    },
+
+    "gdpr": {
+      "compliance_enabled": true,
+      "_comment": "GDPR 合规标志，启用后首次启动显示同意对话框"
+    },
+
+    "i18n": {
+      "enabled": true,
+      "source_lang": "zh_CN",
+      "target_langs": ["en", "ja", "ko"],
+      "_comment": "源语言简体中文，目标语言：英语、日语、韩语"
+    }
+  }
+}

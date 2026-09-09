@@ -1,0 +1,45 @@
+{
+  "$schema": "../schemas/project.schema.json",
+  "project_id": "",
+  "author": {
+    "id": ""
+  },
+  "entry": "main.lua",
+  "version": "1.0.0",
+  "taptap_publish": {
+    "title": "梦境农场",
+    "description": "《梦境农场》是一款二次元田园生活模拟游戏。你将扮演一位厌倦城市生活的年轻人，继承远方亲戚留下的荒废农场，来到宁静的梦境村，从一块杂草丛生的土地开始，慢慢开垦田地、播种作物、浇水收获、经营牧场，并用自己的双手让农场重新恢复生机。",
+    "category": "simulation",
+    "developer_id": 0,
+    "screen_orientation": "landscape",
+    "collection_type": "sce",
+    "trial_note": "",
+    "transparent": false,
+    "app_platforms": "1,2",
+    "app_id": 0,
+    "miniapp_id": "",
+    "gameplay_demo_video_source": ""
+  },
+  "assets": {
+    "icon": "",
+    "screenshots": [],
+    "promotional_image": "",
+    "icon_url": "",
+    "screenshot_urls": [],
+    "promotional_image_url": "",
+    "cover_horizontal": "",
+    "cover_horizontal_url": "",
+    "cover_vertical": "",
+    "cover_vertical_url": ""
+  },
+  "test_qrcode": {
+    "url": "",
+    "generated_at": ""
+  },
+  "metadata": {
+    "updated_at": "",
+    "promo_dependent_hash": ""
+  },
+  "entry@client": "main.lua",
+  "entry@server": "server_main.lua"
+}

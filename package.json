@@ -1,0 +1,13 @@
+{
+  "name": "dreamy-farm-dev-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local dev tools for refactor checking (not part of game build)",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node scripts/tools/refactor_check.cjs"
+  },
+  "devDependencies": {
+    "luaparse": "^0.3.1"
+  }
+}

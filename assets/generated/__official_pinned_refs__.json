@@ -1,0 +1,20 @@
+{
+  "refs": [
+    "Meshes/FarmSlices/MainHouse.mdl",
+    "Meshes/FarmSlices/Warehouse.mdl",
+    "Meshes/FarmSlices/RanchBarn.mdl",
+    "Meshes/FarmSlices/Stable.mdl",
+    "Meshes/FarmSlices/LongBarn.mdl",
+    "Meshes/FarmSlices/Greenhouse.mdl",
+    "Meshes/FarmSlices/Shop.mdl",
+    "Meshes/FarmSlices/Carpenter.mdl",
+    "Meshes/FarmSlices/Smithy.mdl",
+    "Meshes/FarmSlices/FenceSegment.mdl",
+    "Meshes/FarmSlices/SiloTower.mdl",
+    "Meshes/npc_male.mdl",
+    "Meshes/npc_female.mdl",
+    "Materials/npc_male_00_tripo_material_79813308-367e-4ec9-9946-4d37e3a1d17f.xml",
+    "Materials/npc_female_00_tripo_material_6b7768ca-6466-4a04-8701-ce0f55ba07ed.xml",
+    "Materials/LowPoly_Farm_Pack_00_farmmaterial.xml"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "独立软件版配置 — 多平台登录，键盘/手柄支持，可选广告",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "standalone",
+    "platform_name": "独立软件版",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "input": {
+      "keyboard_enabled": true,
+      "gamepad_enabled": true
+    },
+
+    "login": {
+      "providers": ["taptap", "wechat", "douyin", "google", "guest"],
+      "taptap_sdk": {
+        "client_id": "YOUR_TAPTAP_CLIENT_ID_HERE",
+        "client_token": "YOUR_TAPTAP_CLIENT_TOKEN_HERE",
+        "login_enabled": true
+      },
+      "wechat_sdk": {
+        "app_id": "YOUR_WECHAT_APPID_HERE",
+        "login_enabled": true
+      },
+      "douyin_sdk": {
+        "app_id": "YOUR_DOUYIN_APPID_HERE",
+        "login_enabled": true
+      },
+      "google_sign_in": {
+        "enabled": true,
+        "web_client_id": "YOUR_GOOGLE_WEB_CLIENT_ID_HERE"
+      },
+      "guest_login": {
+        "enabled": true
+      }
+    },
+
+    "ads": {
+      "enabled": false,
+      "providers": ["admob"],
+      "ad_unit_ids": {
+        "reward": "YOUR_REWARD_AD_UNIT_ID_HERE",
+        "interstitial": "YOUR_INTERSTITIAL_AD_UNIT_ID_HERE",
+        "banner": "YOUR_BANNER_AD_UNIT_ID_HERE"
+      }
+    }
+  }
+}

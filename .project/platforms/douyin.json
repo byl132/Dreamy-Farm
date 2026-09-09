@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "抖音小游戏配置 — 录屏分享，短视频挂载，激励广告",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "douyin",
+    "platform_name": "抖音小游戏",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "taptap_sdk": {
+      "login_enabled": false
+    },
+
+    "platform_config": {
+      "app_id": "YOUR_DOUYIN_APPID_HERE",
+
+      "ad_unit_ids": {
+        "reward": "YOUR_DOUYIN_REWARD_AD_UNIT_ID_HERE",
+        "banner": "YOUR_DOUYIN_BANNER_AD_ID_HERE"
+      },
+
+      "features": {
+        "record_screen": true,
+        "_record_comment": "启用抖音录屏功能，玩家可录制精彩片段",
+        "share_video": true,
+        "_share_video_comment": "启用录屏后分享到抖音短视频",
+        "short_video_mount": {
+          "enabled": true,
+          "_comment": "短视频挂载配置，用户可从短视频入口进入小游戏",
+          "video_id": "YOUR_SHORT_VIDEO_ID_HERE",
+          "schema_link": "YOUR_SCHEMA_LINK_HERE"
+        }
+      }
+    }
+  }
+}

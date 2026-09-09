@@ -1,0 +1,21 @@
+{
+  "$schema": "../schemas/resources.schema.json",
+
+  "preload_groups": [
+    "core"
+  ],
+
+  "groups": {
+    "core": [
+      "scripts/**",
+      "generated/__official_pinned_refs__.json",
+      "Meshes/**",
+      "Textures/**",
+      "Materials/**"
+    ],
+    "default": [
+      "audio/**",
+      "image/**"
+    ]
+  }
+}

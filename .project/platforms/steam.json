@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schemas/settings.schema.json",
+  "_description": "Steam 配置 — Steamworks 成就/云存档，键盘手柄，窗口管理",
+
+  "sources": {
+    "engine": { "tag": "stable" },
+    "engine-res": { "tag": "stable" },
+    "official-res": { "tag": "stable" }
+  },
+
+  "build": {
+    "generate_fs_path": true,
+    "output_dir": "../dist",
+    "asset_dirs": ["../assets", "../scripts"],
+    "asset_ignores": [
+      "assets/model/*_model.glb",
+      "assets/model/*_model.glb.meta",
+      "model/*_model.glb",
+      "model/*_model.glb.meta"
+    ]
+  },
+
+  "@runtime": {
+    "build_target": "steam",
+    "platform_name": "Steam",
+
+    "multiplayer": {
+      "enabled": false,
+      "max_players": 4,
+      "persistent_world": { "enabled": false },
+      "background_match": false,
+      "match_info": {
+        "desc_name": "free_match",
+        "immediately_start": false,
+        "match_timeout": 0,
+        "player_number": 1
+      }
+    },
+
+    "taptap_sdk": {
+      "login_enabled": false
+    },
+
+    "steamworks": {
+      "app_id": "YOUR_STEAM_APP_ID_HERE",
+
+      "achievements": [
+        {
+          "id": "YOUR_ACHIEVEMENT_API_NAME_HERE",
+          "display_name": "初次收获",
+          "description": "完成你的第一次农作物收获",
+          "icon_path": "Assets/Steam/achievements/first_harvest.png"
+        },
+        {
+          "id": "YOUR_ACHIEVEMENT_API_NAME_2_HERE",
+          "display_name": "农场大亨",
+          "description": "累计收入达到 100,000 金币",
+          "icon_path": "Assets/Steam/achievements/farm_tycoon.png"
+        }
+      ],
+
+      "stats": {
+        "enabled": true,
+        "_comment": "Steam 统计/排行榜功能"
+      },
+
+      "cloud": {
+        "enabled": true,
+        "quota_bytes": 104857600,
+        "_comment": "Steam Cloud 云存档，配额 100MB",
+        "file_patterns": ["*.sav", "config.json", "progress.dat"]
+      },
+
+      "ugc": {
+        "enabled": false,
+        "_comment": "Steam 创意工坊（UGC），梦境农场暂不启用"
+      }
+    },
+
+    "input": {
+      "keyboard_enabled": true,
+      "gamepad_enabled": true,
+      "_comment": "Steam 版本同时支持键盘和手柄操作"
+    },
+
+    "window": {
+      "default_width": 1920,
+      "default_height": 1080,
+      "fullscreen": false,
+      "resizable": true,
+      "vsync": true,
+      "_comment": "窗口管理：默认 1080P 窗口模式，支持调整大小和垂直同步",
+      "supported_resolutions": [
+        { "width": 1280, "height": 720 },
+        { "width": 1600, "height": 900 },
+        { "width": 1920, "height": 1080 },
+        { "width": 2560, "height": 1440 },
+        { "width": 3840, "height": 2160 }
+      ]
+    }
+  }
+}

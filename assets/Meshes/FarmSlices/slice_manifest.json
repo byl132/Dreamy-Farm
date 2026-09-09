@@ -1,0 +1,264 @@
+{
+  "MainHouse": {
+    "file": "/workspace/assets/Meshes/FarmSlices/MainHouse.mdl",
+    "vertices": 29538,
+    "indices": 29538,
+    "objects": [
+      "Box2463",
+      "Box2468",
+      "Object531",
+      "Box2464",
+      "Object529",
+      "Object530",
+      "Object569",
+      "Box2467",
+      "Box2466",
+      "Rectangle073",
+      "Box2465",
+      "Rectangle074"
+    ],
+    "bounds": [
+      [
+        -7.12215836,
+        0.0,
+        -9.072954100000002
+      ],
+      [
+        7.122158360000001,
+        7.56817237,
+        9.072954099999997
+      ]
+    ]
+  },
+  "Warehouse": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Warehouse.mdl",
+    "vertices": 20208,
+    "indices": 20208,
+    "objects": [
+      "Box2473",
+      "Object533",
+      "Box2480",
+      "Object570",
+      "Box2476",
+      "Plane086",
+      "Object534",
+      "Box2479",
+      "Rectangle076",
+      "Box2478"
+    ],
+    "bounds": [
+      [
+        -7.317418215,
+        0.0,
+        -7.011270749999999
+      ],
+      [
+        7.317418215,
+        7.56817149,
+        7.011270750000001
+      ]
+    ]
+  },
+  "RanchBarn": {
+    "file": "/workspace/assets/Meshes/FarmSlices/RanchBarn.mdl",
+    "vertices": 30750,
+    "indices": 30750,
+    "objects": [
+      "Box2491",
+      "Box2490",
+      "Object554",
+      "Object565",
+      "Box2492",
+      "Object560",
+      "Object563",
+      "Line426"
+    ],
+    "bounds": [
+      [
+        -7.835023195000003,
+        0.0,
+        -5.9573083500000035
+      ],
+      [
+        7.835023194999999,
+        6.5002857700000005,
+        5.957308349999998
+      ]
+    ]
+  },
+  "Stable": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Stable.mdl",
+    "vertices": 19158,
+    "indices": 19158,
+    "objects": [
+      "Box2494",
+      "Box2495",
+      "Object556",
+      "Object564",
+      "Box2497",
+      "Object555",
+      "Object568",
+      "Box2496"
+    ],
+    "bounds": [
+      [
+        -4.844953610000003,
+        0.0,
+        -6.783856504999999
+      ],
+      [
+        4.8449536099999975,
+        6.5513803699999995,
+        6.783856505
+      ]
+    ]
+  },
+  "LongBarn": {
+    "file": "/workspace/assets/Meshes/FarmSlices/LongBarn.mdl",
+    "vertices": 15600,
+    "indices": 15600,
+    "objects": [
+      "Box2507",
+      "Box2509",
+      "Object561",
+      "Line422",
+      "Line423",
+      "Box2508"
+    ],
+    "bounds": [
+      [
+        -4.304245000000001,
+        0.0,
+        -8.510500795
+      ],
+      [
+        4.304245000000001,
+        6.192156560000001,
+        8.510500794999999
+      ]
+    ]
+  },
+  "Greenhouse": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Greenhouse.mdl",
+    "vertices": 4224,
+    "indices": 4224,
+    "objects": [
+      "greenhouse_b02_001"
+    ],
+    "bounds": [
+      [
+        -2.3566284150000003,
+        0.0,
+        -3.5879028300000027
+      ],
+      [
+        2.3566284150000003,
+        2.33051456,
+        3.587902829999998
+      ]
+    ]
+  },
+  "Shop": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Shop.mdl",
+    "vertices": 5172,
+    "indices": 5172,
+    "objects": [
+      "structures_b001"
+    ],
+    "bounds": [
+      [
+        -2.3224633800000016,
+        0.0,
+        -2.50000061
+      ],
+      [
+        2.3224633799999994,
+        2.93054059,
+        2.500000610000002
+      ]
+    ]
+  },
+  "Carpenter": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Carpenter.mdl",
+    "vertices": 4200,
+    "indices": 4200,
+    "objects": [
+      "structures_c002"
+    ],
+    "bounds": [
+      [
+        -2.3554327400000012,
+        0.0,
+        -2.5
+      ],
+      [
+        2.355432739999999,
+        3.01832294,
+        2.5
+      ]
+    ]
+  },
+  "Smithy": {
+    "file": "/workspace/assets/Meshes/FarmSlices/Smithy.mdl",
+    "vertices": 4236,
+    "indices": 4236,
+    "objects": [
+      "structures_a03_002"
+    ],
+    "bounds": [
+      [
+        -4.603178710000002,
+        0.0,
+        -3.202058715
+      ],
+      [
+        4.603178709999997,
+        4.93996771,
+        3.202058715
+      ]
+    ]
+  },
+  "FenceSegment": {
+    "file": "/workspace/assets/Meshes/FarmSlices/FenceSegment.mdl",
+    "vertices": 1452,
+    "indices": 1452,
+    "objects": [
+      "fence_b006"
+    ],
+    "bounds": [
+      [
+        -0.13,
+        0.0,
+        -0.9078175350000004
+      ],
+      [
+        0.13,
+        1.00280832,
+        0.9078175349999993
+      ]
+    ]
+  },
+  "SiloTower": {
+    "file": "/workspace/assets/Meshes/FarmSlices/SiloTower.mdl",
+    "vertices": 5160,
+    "indices": 5160,
+    "objects": [
+      "Box2543",
+      "Cylinder283",
+      "Cylinder284",
+      "Object595"
+    ],
+    "bounds": [
+      [
+        -2.1056671149999993,
+        0.0,
+        -2.1072827149999966
+      ],
+      [
+        2.105667115,
+        10.57251197,
+        2.107282715000001
+      ]
+    ]
+  }
+}
