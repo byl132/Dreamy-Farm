@@ -85,6 +85,7 @@ scripts/config/ServerLoginConfig.lua
 /notes/
 /.trae/
 /.project/taptap-video-cache.json
+/.project/taptap-video-cache.json.meta
 /多端适配与海外发行规划.md
 /代码分析报告_梦境农场.md
 /工作进度可视化.md

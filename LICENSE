@@ -1,24 +1,33 @@
-This is free and unencumbered software released into the public domain.
+Copyright (c) 2026 byl132. All rights reserved. / 保留所有权利。
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+本仓库中的源代码、美术资源、音频资源及相关文档（以下统称"本作品"）
+的著作权均归 byl132 所有，未授予任何公开许可。
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+未经著作权人事先书面许可，任何人不得：
+  - 复制、分发、出租或公开传播本作品的全部或部分；
+  - 修改本作品或基于本作品创作衍生作品；
+  - 将本作品用于商业用途，包括但不限于打包、改编后上架任何平台；
+  - 移除或更改本作品中的版权与署名信息。
+
+在法律法规允许的范围内，用户仅可为个人学习、研究或欣赏之目的
+浏览和下载本仓库内容，不得用于其他用途。
+
+本作品按"现状"提供，作者不对本作品作任何明示或暗示的保证，
+包括但不限于适销性、特定用途适用性及不侵权的保证。
+
+---
+
+This work, including all source code, art assets, audio assets and
+documentation in this repository, is © 2026 byl132.
+All rights are reserved. No license is granted to reproduce,
+distribute, modify, create derivative works of, or use this work
+for any commercial purpose without prior written permission from
+the copyright holder.
+
+Browsing and downloading for personal, non-commercial study is
+permitted where applicable law allows.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <https://unlicense.org>
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT.
